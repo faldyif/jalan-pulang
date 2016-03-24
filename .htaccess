@@ -1,0 +1,16 @@
+Options +FollowSymlinks
+ReWriteEngine On
+
+#change the urls
+ReWriteRule ^/?([a-zA-Z0-9]+)/?$ index.php?page=$1
+ReWriteRule ^/?([a-zA-Z0-9]+)/page/([0-9]+)/?$ index.php?page=$1&&paging=$2
+ReWriteRule ^/?([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ index.php?page=$1&&id=$2
+
+#change the urls to .htm
+ReWriteRule ^/?([a-zA-Z0-9]+).htm/?$ index.php?page=$1
+ReWriteRule ^/?([a-zA-Z0-9]+).htm/page/([0-9]+)/?$ index.php?page=$1&&paging=$2
+ReWriteRule ^/?([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ index.php?page=$1&&id=$2
+
+#define error document format
+ErrorDocument 404 /pulang/view/modules/404.php
+ErrorDocument 403 /pulang/view/modules/404.php

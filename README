@@ -1,0 +1,14 @@
+user frontend
+username : lorem
+password : 123
+
+user admin
+url admin http://.../admin
+username : faldy 
+password : 123
+
+nama tabel rekomendasi: pulang
+sql: pulang.sql
+
+config db ada di lib/database.php
+setting path dari lib/settings.php
